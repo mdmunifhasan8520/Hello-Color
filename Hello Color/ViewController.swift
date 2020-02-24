@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var isRed = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    //MARK: Button Tap Function
+    /**
+                Change Background color of the view on button tap
+    */
+    @IBAction func changeColor(_ sender: Any) {
+        if isRed {
+            view.backgroundColor = .black
+            isRed = false
+        } else {
+            view.backgroundColor = .red
+            isRed = true
+        }
+    }
 }
 
